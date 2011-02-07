@@ -8,10 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Web.UI;
+
 namespace DirectSports.adminarea {
     
     public partial class specialofferadmin {
-        protected Microsoft.Web.UI.UpdatePanel upSpecialOffers;
+        protected UpdatePanel upSpecialOffers;
         protected System.Web.UI.WebControls.Panel changeProductPanel;
         protected System.Web.UI.WebControls.Label pnlOfferNumber;
         protected System.Web.UI.WebControls.Label lblProductNameSearch;

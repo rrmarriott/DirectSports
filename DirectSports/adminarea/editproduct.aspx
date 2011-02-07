@@ -35,6 +35,7 @@
             <asp:TextBox ID="txtImageFileName" runat="server"></asp:TextBox><br />
             <asp:Label ID="lblUpdate" runat="server" AssociatedControlID="btnUpdate" ></asp:Label>
             <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="button" OnClick="btnUpdate_Click" />
+            <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="button" OnClick="btnDelete_Click" OnClientClick="parent.hidePopWin(true);alert('Product Deleted')" />
             <input type="reset" class="button" value="Reset" />
             <input type="button" class="button" value="Close" onclick="parent.hidePopWin(true);" />
         </fieldset>

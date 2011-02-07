@@ -1,6 +1,5 @@
-using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using SD.LLBLGen.Pro.ORMSupportClasses;
 using DirectSports.BL.DatabaseSpecific;
 using DirectSports.BL.HelperClasses;
@@ -12,9 +11,9 @@ namespace DirectSports.BL.EntityClasses
     {
         public static ProductEntity LoadProductById(int productId)
         {
-            ProductEntity product = new ProductEntity(productId);
+            var product = new ProductEntity(productId);
 
-            using (DataAccessAdapter adapter = new DataAccessAdapter())
+            using (var adapter = new DataAccessAdapter())
             {
                 adapter.FetchEntity(product);
             }
@@ -24,31 +23,35 @@ namespace DirectSports.BL.EntityClasses
 
         public static List<ProductEntity> SearchForProductsByName(string name)
         {
-            RelationPredicateBucket bucket = new RelationPredicateBucket();
+            var bucket = new RelationPredicateBucket();
             bucket.PredicateExpression.Add(PredicateFactory.Like(ProductFieldIndex.Name, string.Format("%{0}%", name)));
 
-            EntityCollection productEntities = new EntityCollection(new ProductEntityFactory());
+            var productEntities = new EntityCollection(new ProductEntityFactory());
 
-            using (DataAccessAdapter adapter = new DataAccessAdapter())
+            using (var adapter = new DataAccessAdapter())
             {
                 adapter.FetchEntityCollection(productEntities, bucket);
             }
 
-            List<ProductEntity> products = new List<ProductEntity>(productEntities.Count);
-
-            foreach (ProductEntity pe in productEntities)
-            {
-                products.Add(pe);
-            }
+            var products = new List<ProductEntity>(productEntities.Count);
+            products.AddRange(productEntities.Cast<ProductEntity>());
 
             return products;
         }
 
         public void Save()
         {
-            using (DataAccessAdapter adapter = new DataAccessAdapter())
+            using (var adapter = new DataAccessAdapter())
             {
                 adapter.SaveEntity(this);
+            }
+        }
+
+        public void Delete()
+        {
+            using (var adapter = new DataAccessAdapter())
+            {
+                adapter.DeleteEntity(this);
             }
         }
     }

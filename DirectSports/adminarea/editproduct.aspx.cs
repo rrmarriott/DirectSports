@@ -1,13 +1,5 @@
 using System;
-using System.Data;
-using System.Configuration;
-using System.Collections;
 using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
 using DirectSports.BL.EntityClasses;
 using System.Threading;
 
@@ -28,7 +20,7 @@ namespace DirectSports.adminarea
 
         private void LoadForm(int productId)
         {
-            ProductEntity product = ProductEntity.LoadProductById(productId);
+            var product = ProductEntity.LoadProductById(productId);
             txtProdId.Text = productId.ToString();
             txtProdName.Text = product.Name;
             txtProdDescription.Text = product.Description;
@@ -45,7 +37,7 @@ namespace DirectSports.adminarea
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             Thread.Sleep(200);
-            ProductEntity toSave = new ProductEntity(int.Parse(txtProdId.Text));
+            var toSave = new ProductEntity(int.Parse(txtProdId.Text));
             toSave.IsNew = false;
             toSave.Name = txtProdName.Text;
             toSave.Description = txtProdDescription.Text;
@@ -57,6 +49,13 @@ namespace DirectSports.adminarea
             toSave.DeliveryPrice = decimal.Parse(txtDeliveryPrice.Text);
             toSave.ImageName = txtImageFileName.Text;
             toSave.Save();
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            Thread.Sleep(200);
+            var toDelete = new ProductEntity(int.Parse(txtProdId.Text));
+            toDelete.Delete();
         }
     }
 }

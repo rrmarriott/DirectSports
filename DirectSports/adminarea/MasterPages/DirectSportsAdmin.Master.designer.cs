@@ -8,11 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Web.UI;
+
 namespace DirectSports.adminarea.MasterPages {
     
     public partial class DirectSportsAdmin {
         protected System.Web.UI.HtmlControls.HtmlForm form1;
-        protected Microsoft.Web.UI.ScriptManager scmScriptManager;
+        protected ScriptManager scmScriptManager;
         protected System.Web.UI.WebControls.Literal litLoggedInMessage;
         protected System.Web.UI.WebControls.LoginStatus lstsAdminLoginStatus;
         protected System.Web.UI.WebControls.ContentPlaceHolder cphAdminContent;

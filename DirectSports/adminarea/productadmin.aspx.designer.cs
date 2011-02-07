@@ -8,10 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Web.UI;
+
 namespace DirectSports.adminarea {
     
     public partial class productadmin {
-        protected Microsoft.Web.UI.UpdatePanel upProductSection;
+        protected UpdatePanel upProductSection;
         protected System.Web.UI.WebControls.TreeView tvProductSections;
         protected System.Web.UI.WebControls.Literal litProductSectionName;
         protected System.Web.UI.WebControls.GridView gvProductList;
