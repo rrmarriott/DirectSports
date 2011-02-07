@@ -1,0 +1,7 @@
+_ReSharper.*/
+[bB]in/
+[oO]bj/
+Properties/
+*.ReSharper.user
+*.csproj.user
+*.suo

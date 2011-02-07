@@ -1,0 +1,77 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DirectSports.master.cs" Inherits="DirectSports.MasterPages.DirectSports" %>
+<%@ Register TagPrefix="RRM" Assembly="RRMCustomControls" Namespace="RRMCustomControls" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-gb">
+<head id="Head1" runat="server">
+<title>Planet Classroom&trade;</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="/styles/global.css" />
+<!--  insert css for IE Browsers -->   
+<!--[if lt IE 7.0]>
+<link rel="stylesheet" type="text/css" href="/styles/ie/ie6.css" />
+<![endif]-->
+<!--[if gte IE 7.0]>
+<link rel="stylesheet" type="text/css" href="/styles/ie/ie7.css" />
+<![endif]-->
+<script type="text/javascript" src="/js/IEElementActions.js"></script>
+</head>
+
+<body>
+<div id="divHolder">
+	<div id="divContainer">
+	    <div id="divHeaderNavContainer">
+		    <div id="divHeader">
+		        <div id="divHeaderInner">
+		            <div id="divHeaderContact">
+		                <b>T:</b> +44 (0)800 328 9606
+		                <br />
+		                <b>E:</b> info@basketballkit.co.uk
+		            </div>
+		            <a id="ancLogoHome" href="/" title="Direct Sports Home">
+		                <img src="/images/ds_logo_main.gif" width="290" height="41" alt="Direct Sports - Home" />
+		            </a>
+		        </div>
+		    </div>
+		    <!--begin main tab navigation -->
+		    <div id="divTopNavWrapper">
+			    <div class="divTabNav">
+			        <RRM:SiteMapTabStrip runat="server" id="tabMain"></RRM:SiteMapTabStrip>
+	                <div id="divSepBar">
+                        <img src="/images/spacer.gif" width="1" height="22" alt="" />
+                    </div>
+			    </div>
+		    </div>
+		</div>
+		<!--end header container -->
+		<div id="breadcrumbHolder">
+            <RRM:CustomBreadcrumb runat="server" UrlOfPageToHide="/empty.aspx" id="breadcrumb"></RRM:CustomBreadcrumb>    
+        </div>
+		<!--begin content container -->
+		<div id="divMenuContainer">
+		        <RRM:SiteMapNavMenu runat="server" id="leftNavMenu"></RRM:SiteMapNavMenu>
+		</div>
+		    
+		<div id="mainContent">
+		    <form id="dsSports" runat="server">
+		        <asp:ContentPlaceHolder ID="mainContentArea" runat="server">
+    			
+			    </asp:ContentPlaceHolder>
+			</form>
+		</div>
+		
+		<!-- Begin FOOTER  -->
+        <div id="footer">
+	        <div id="footerCopyright">
+	            &copy; Direct Sports UK 2008
+	        </div>
+	        <div>
+		        <a href="/contact.aspx" title="Contact Direct Sports">Contact Us</a> | <a href="/about.aspx" title="About Direct Sports">About Us</a> | <a href="/privacy.aspx" title="Direct Sports Privacy Policy">Privacy Policy</a>
+            </div>
+        </div>
+        <!-- End FOOTER -->
+	<!--end container -->
+	</div>
+<!--end holder 100% -->
+</div>
+</body>
+</html>

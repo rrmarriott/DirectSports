@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectSports", "DirectSports.csproj", "{AA383B9F-52D9-411E-9D03-0B35F569AB09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RRMCustomControls", "..\..\Personal\Development\asp.net2.0\CommonResources\RRMCustomControls\RRMCustomControls.csproj", "{EE2ED740-259F-47EB-AC16-6DACA84C38D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectSports.BLDBSpecific", "..\DirectSports.Generate\DirectSports.BLDBSpecific.csproj", "{66F35532-4A1A-4AD3-B2D4-437F014551F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectSports.BL", "..\DirectSports.Generate\DirectSports.BL.csproj", "{9F5CCC53-3412-41BC-AE9D-3213BD996D70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA383B9F-52D9-411E-9D03-0B35F569AB09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA383B9F-52D9-411E-9D03-0B35F569AB09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA383B9F-52D9-411E-9D03-0B35F569AB09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA383B9F-52D9-411E-9D03-0B35F569AB09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE2ED740-259F-47EB-AC16-6DACA84C38D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE2ED740-259F-47EB-AC16-6DACA84C38D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE2ED740-259F-47EB-AC16-6DACA84C38D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE2ED740-259F-47EB-AC16-6DACA84C38D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F35532-4A1A-4AD3-B2D4-437F014551F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F35532-4A1A-4AD3-B2D4-437F014551F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F35532-4A1A-4AD3-B2D4-437F014551F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F35532-4A1A-4AD3-B2D4-437F014551F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F5CCC53-3412-41BC-AE9D-3213BD996D70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F5CCC53-3412-41BC-AE9D-3213BD996D70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F5CCC53-3412-41BC-AE9D-3213BD996D70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F5CCC53-3412-41BC-AE9D-3213BD996D70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,53 @@
+
+/* =IE 6x (LESS THAN IE7) 
+----------------------------------------------------------------------- */
+
+
+/* =MAIN BODY
+----------------------------------------------------------------------- */
+	#divContainer { /* Tan hack for IE*/
+	}
+	
+   #divHeader, #header2 { /* Tan hack for IE*/
+	}
+	
+	div#mainContent
+	{
+		width: 75%;
+	}
+	div.divHomePageSection
+	{
+		/*padding-top: 1em;*/
+	}
+	.divTabNav a, .divTabNav a:visited
+	{
+		background: url("../../images/ds_headertab_right_new.gif") no-repeat right bottom;
+		background-position: 100% -129px;
+	}
+	.divTabNav a:hover
+	{
+		background: url("../../images/ds_headertab_right_new.gif") no-repeat right bottom;
+		background-position: 100% 0px;
+		color: #000;
+	}
+	
+	div#breadcrumbHolder
+	{
+		margin: 0.6em 0 0 1.6em;
+	}
+	
+/* =HEADER NAVIGATION WITH HOME/CONTENT/HELP LINKS
+----------------------------------------------------------------------- */
+
+   #divHeaderNavContainer { /* Tan hack for IE*/
+	width: ;
+	w\idth: ; 
+	}
+
+
+/* =FOOTER
+----------------------------------------------------------------------- */
+
+   #footer { /* Tan hack for IE*/
+	}
+/* Product Lister Styles */

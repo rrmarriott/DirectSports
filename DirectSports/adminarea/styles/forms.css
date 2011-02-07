@@ -1,0 +1,53 @@
+body
+{
+	background: #BECCE4;
+}
+
+form
+{
+	font-size: 0.8em;
+}
+
+fieldset
+{
+	border: 1px solid #78A3F2;
+	padding: 1em;
+	margin: 1em;
+}
+
+fieldset legend
+{
+	border: 1px solid #78A3F2;
+	padding: 0.3em;
+	font-weight: bold;
+}
+
+fieldset label
+{
+	display: block;
+	float: left;
+	width: 150px;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 0.4em;
+}
+
+fieldset span
+{
+	font-weight: bold;
+}
+
+fieldset input, textarea
+{
+	width: 15em;
+}
+
+fieldset span.checkbox input
+{
+	width: 1em;
+}
+
+fieldset input.button
+{
+	width: 7em;
+}

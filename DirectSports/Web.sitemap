@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/default.aspx" title="Home" description="Direct Sports - Home">
+      <siteMapNode url="~/empty.aspx" title="Sports" description="empty">
+        <siteMapNode url="~/athletics.aspx" title="Athletics"  description="Direct Sports - Athletics">
+          <siteMapNode url="~/athletics_kits.aspx" title="Athletics Kit" description="Athletics Kit" />
+          <siteMapNode url="~/athletics_equipment.aspx" title="Athletics Equipment" description="Athletics Equipment" />
+        </siteMapNode>
+        <siteMapNode url="~/badminton.aspx" title="Badminton"  description="Direct Sports - Badminton" />
+        <siteMapNode url="~/basketball.aspx" title="Basketball"  description="Direct Sports - Basketball">
+          <siteMapNode url="~/basketball_direct.aspx" title="Uniforms - Direct Sports" description="Basketball Uniforms by Direct Sports" />
+          <siteMapNode url="~/basketball_legea.aspx" title="Uniforms - Legea" description="Basketball Uniforms by Legea of Italy" />
+          <siteMapNode url="~/basketball_errea.aspx" title="Uniforms - Errea" description="Basketball Uniforms by Errea" />
+          <siteMapNode url="~/basketball_macron.aspx" title="Uniforms - Macron" description="Basketball Uniforms by Macron" />
+          <siteMapNode url="~/basketball_balls.aspx" title="Basketballs" description="Basketballs" />
+          <siteMapNode url="~/basketball_accessoriesandref.aspx" title="Accessories/Referee" description="Basketball Accessories and Referees' Equipment" />
+          <siteMapNode url="~/basketball_scoring.aspx" title="Scoring Equipment" description="Basketball Scoring Equipment" />
+          <siteMapNode url="~/basketball_posts.aspx" title="Basketball Posts" description="Basketball Posts" />
+          <siteMapNode url="~/basketball_rings.aspx" title="Basketball Rings" description="Basketball Rings" />
+          <siteMapNode url="~/basketball_mini.aspx" title="Mini Basketball" description="Mini Basketball" />
+        </siteMapNode>
+        <siteMapNode url="~/cricket.aspx" title="Cricket"  description="Direct Sports - Cricket" />
+        <siteMapNode url="~/football.aspx" title="Football"  description="Direct Sports - Football">
+          <siteMapNode url="~/football_kit.aspx" title="Legea Football Kit" description="Legea Football Kit" />
+          <siteMapNode url="~/football_kit_macron.aspx" title="Macron Football Kit" description="Macron Football Kit" />
+          <siteMapNode url="~/football_kit_errea.aspx" title="Errea Football Kit" description="Errea Football Kit" />
+          <siteMapNode url="~/football_balls.aspx" title="Football Balls" description="Football Balls" />
+          <siteMapNode url="~/football_goals.aspx" title="Football Goals and Nets" description="Football Goals and Nets" />
+          <siteMapNode url="~/football_clothing.aspx" title="Football Clothing" description="Football Clothing" />
+        </siteMapNode>
+        <siteMapNode url="~/hockey.aspx" title="Hockey"  description="Direct Sports - Hockey" />
+        <siteMapNode url="~/netball.aspx" title="Netball"  description="Direct Sports - Netball" />
+        <siteMapNode url="~/racketsports.aspx" title="Racket Sports"  description="Direct Sports - Racket Sports" />
+        <siteMapNode url="~/rugby.aspx" title="Rugby"  description="Direct Sports - Rugby" />
+        <siteMapNode url="~/softball.aspx" title="Softball"  description="Direct Sports - Softball" />
+        <siteMapNode url="~/tabletennis.aspx" title="Table Tennis"  description="Direct Sports - Table Tennis" />
+        <siteMapNode url="~/trainingequipment.aspx" title="Training Equipment"  description="Direct Sports - Training Equipment" />
+        <siteMapNode url="~/matsandbenches.aspx" title="Mats and Benches"  description="Direct Sports - Mats and Benches" />
+        <siteMapNode url="~/trampolines.aspx" title="Trampolines"  description="Direct Sports - Trampolines" />
+        <siteMapNode url="~/volleyball.aspx" title="Volleyball"  description="Direct Sports - Volleyball" />
+      </siteMapNode>
+      <siteMapNode url="~/contact.aspx" title="Contact Us" description="Direct Sports - Contact" />
+      <siteMapNode url="~/requestinformation.aspx" title="Request Information"  description="Direct Sports - Request Information" />
+      <siteMapNode url="~/about.aspx" title="About Us"  description="Direct Sports - About" />
+      <siteMapNode url="~/privacy.aspx" title="Privacy Policy"  description="Direct Sports - Privacy Policy" />
+    </siteMapNode>
+</siteMap>

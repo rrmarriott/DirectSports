@@ -1,0 +1,49 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DirectSportsAdmin.master.cs" Inherits="DirectSports.adminarea.MasterPages.DirectSportsAdmin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Direct Sports - Product Admin</title>
+    <link href="/adminarea/styles/admin.css" rel="stylesheet" type="text/css" />
+    <link href="/adminarea/styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="/adminarea/styles/submodal.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/adminarea/js/submodalsource.js"></script>
+    <script type="text/javascript" src="/adminarea/js/utils.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="scmScriptManager" EnableViewState="true"
+            EnablePartialRendering="true" runat="server">
+        </asp:ScriptManager>
+        <div id="divHeader">
+            <div id="divLoggedInMessage">
+                <asp:Literal ID="litLoggedInMessage" runat="server"></asp:Literal><asp:LoginStatus
+                    ID="lstsAdminLoginStatus" runat="server" />
+            </div>
+            <img src="/images/ds_logo_admin.gif" height="41" width="290" alt="Direct Sports Admin" />
+        </div>
+        <div id="divSepBar">
+        </div>
+        <div id="divContent">
+            <asp:ContentPlaceHolder ID="cphAdminContent" runat="server">
+            
+            </asp:ContentPlaceHolder>
+        </div>
+        <!--Dialog Support-->
+		<div id="popupMask"></div>
+		<div id="popupContainer">
+			<div id="popupInner">
+				<div id="popupTitleBar">
+					<div id="popupTitle"></div>
+					<div id="popupControls">
+						<img src="/images/close.gif" alt="Close Dialogue" onclick="hidePopWin(true);" />
+					</div>
+				</div>
+				<iframe src="loading.html" style="WIDTH:1%;HEIGHT:0px;BACKGROUND-COLOR:transparent" scrolling="no" frameborder="0" id="popupFrame" name="popupFrame"></iframe>
+			</div>
+		</div>
+    </form>
+</body>
+</html>

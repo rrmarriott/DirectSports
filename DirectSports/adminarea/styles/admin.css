@@ -1,0 +1,227 @@
+body
+{
+	font-family: Verdana, Arial, Sans-Serif;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+h1
+{
+	font-size: 1.3em;
+}
+
+h2#productSectionHeader
+{
+	display: block;
+	border-bottom: 2px dotted #ccc;
+	font-size: 1em;
+}
+
+div#divHeader
+{
+	width: 98%;
+	height: 2em;
+	padding: 0.4em;
+}
+
+div#divSepBar
+{
+	background: url(../../images/ds_sepbar_bg.jpg) repeat-x bottom;
+	width: 100%;
+	height: 24px;
+}
+
+div#divLoggedInMessage
+{
+	float: right;
+	font-size: 0.8em;
+	padding: 0.3em;
+	margin: 1.5em 0 0 0 ;
+}
+
+div#divContent
+{
+	padding: 0.4em;
+	white-space: nowrap;
+}
+
+div#divProductSectionTreeArea
+{
+	float: left;
+	width: 30%;
+}
+
+div#divProductsInSectionList
+{
+	width: 63%;
+	margin-left: 32%;
+}
+
+/*treeview styles*/
+.Tree
+{
+	background: #F9F9F9;
+}
+
+.NodeStyle
+{
+	font-size: 8pt;
+	font-weight: bold;
+	width: 97%;
+	background: url("../../images/ds_leftnav_item_bg.jpg") repeat-x top;
+}
+
+.NodeHoverStyle
+{
+	background-position: 0 -50px;
+}
+
+.NodeStyle a
+{
+	display: block;
+	width: 100%;
+	line-height: 1.8em;
+	/*border: 1px solid #000 !important;*/
+}
+
+.Tree a:link, a:visited
+{
+	color: #000;
+}
+
+.Tree a:hover
+{
+	color: #c00;
+}
+
+.Tree a:active
+{
+	color: #000;
+}
+
+/* end tree styles */
+
+/* begin product table styles */
+.DefaultGrid
+{
+	width: 100%;
+	border: 0;
+}
+
+.DefaultGrid img
+{
+	border: 0;
+}
+
+.DefaultGridHeader, .emptyRow
+{
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 0.7em;
+	font-weight: bold;
+	text-align: left;
+}
+
+.DefaultGridHeader th
+{
+	border-bottom: 1px solid black;
+}
+
+.DefaultGridRow
+{
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 0.7em;
+	border-bottom: 1px solid black;
+	background-image: url(../../images/ds_admin_gridrow_bg.gif);
+	background-repeat: repeat-x;
+}
+
+.DefaultGridRow td
+{
+	border-bottom: 1px solid #999999;
+}
+
+.DefaultGridRowAlternate
+{
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 0.7em;
+	border-bottom: 1px solid black;
+	background-color: #cccccc;
+	background-image: url(../../images/ds_admin_gridalternate_bg.gif);
+	background-repeat: repeat-x;
+}
+
+.DefaultGridRowAlternate td
+{
+	border-bottom: 1px solid #999999;
+}
+
+a.lnkGridEdit:link, a.lnkGridEdit:visited
+{
+
+      display: block;
+      background-image: url(../../images/ds_admin_grid_edit.gif);
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 15px;
+      line-height: 15px;
+      text-indent: -1000.00em;
+      text-decoration: none;
+}
+a.lnkGridEdit:hover
+{
+      background-image: url(../../images/ds_admin_grid_edit_hover.gif);
+      background-repeat: no-repeat;
+}
+/* end product table styles */
+
+.panEditProduct
+{
+	display: none;
+}
+
+.hiddenButton
+{
+	visibility: hidden;
+}
+
+a.changeProduct
+{
+	display: block;
+}
+
+/* Popup Styles */
+div#divLoadingBody
+{
+	font-weight: bold;
+	font-size: 1.3em;
+	width: 95%;
+	text-align: center;
+	margin-top: 2em;
+}
+
+div.modalPopup
+{
+	border: 1px solid #000;
+	background: #fff;
+	height: 20em;
+	width: 30%;
+	padding: 0.5em;
+}
+
+.modalBackground
+{
+	background-color:#000;
+	-moz-opacity: 0.7;
+	opacity:.70;
+	filter: alpha(opacity=70);
+}
+/* End Popup Styles */
+
+/* Product Search Styles */
+div#searchResults
+{
+	height: 10em;
+	overflow: auto;
+}
+/* End Product Search Styles */

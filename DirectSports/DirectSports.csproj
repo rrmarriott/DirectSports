@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA383B9F-52D9-411E-9D03-0B35F569AB09}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DirectSports</RootNamespace>
+    <AssemblyName>DirectSports</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.61121.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL" />
+    <Reference Include="HighVoltage.Mail, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Personal\Development\asp.net2.0\HighVoltageMailingList\Deploy\bin\HighVoltage.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Personal\Development\asp.net2.0\HighVoltageMailingList\Deploy\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Extensions.Design, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="SD.LLBLGen.Pro.ORMSupportClasses.NET20, Version=1.0.2005.1, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DirectSports.Generate\DatabaseGeneric\bin\Debug\SD.LLBLGen.Pro.ORMSupportClasses.NET20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminarea\default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminarea\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminarea\editproduct.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>editproduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminarea\editproduct.aspx.designer.cs">
+      <DependentUpon>editproduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminarea\helper\MoveDirection.cs" />
+    <Compile Include="adminarea\login.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminarea\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminarea\MasterPages\DirectSportsAdmin.Master.cs">
+      <DependentUpon>DirectSportsAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminarea\MasterPages\DirectSportsAdmin.Master.designer.cs">
+      <DependentUpon>DirectSportsAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="adminarea\productadmin.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>productadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminarea\productadmin.aspx.designer.cs">
+      <DependentUpon>productadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminarea\specialofferadmin.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>specialofferadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminarea\specialofferadmin.aspx.designer.cs">
+      <DependentUpon>specialofferadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="basketball.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>basketball.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="basketball.aspx.designer.cs">
+      <DependentUpon>basketball.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="basketball_direct.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>basketball_direct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="basketball_direct.aspx.designer.cs">
+      <DependentUpon>basketball_direct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomControls\ProductLister.cs" />
+    <Compile Include="basketball_legea.aspx.cs">
+      <DependentUpon>basketball_legea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="basketball_legea.aspx.designer.cs">
+      <DependentUpon>basketball_legea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="basketball_balls.aspx.cs">
+      <DependentUpon>basketball_balls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="basketball_balls.aspx.designer.cs">
+      <DependentUpon>basketball_balls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="basketball_accessoriesandref.aspx.cs">
+      <DependentUpon>basketball_accessoriesandref.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="basketball_accessoriesandref.aspx.designer.cs">
+      <DependentUpon>basketball_accessoriesandref.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="basketball_scoring.aspx.cs">
+      <DependentUpon>basketball_scoring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="basketball_scoring.aspx.designer.cs">
+      <DependentUpon>basketball_scoring.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="basketball_posts.aspx.cs">
+      <DependentUpon>basketball_posts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="basketball_posts.aspx.designer.cs">
+      <DependentUpon>basketball_posts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="basketball_rings.aspx.cs">
+      <DependentUpon>basketball_rings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="basketball_rings.aspx.designer.cs">
+      <DependentUpon>basketball_rings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="athletics.aspx.cs">
+      <DependentUpon>athletics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="athletics.aspx.designer.cs">
+      <DependentUpon>athletics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="athletics_kits.aspx.cs">
+      <DependentUpon>athletics_kits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="athletics_kits.aspx.designer.cs">
+      <DependentUpon>athletics_kits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="athletics_equipment.aspx.cs">
+      <DependentUpon>athletics_equipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="athletics_equipment.aspx.designer.cs">
+      <DependentUpon>athletics_equipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserControls\NoImageProductLister.ascx.cs">
+      <DependentUpon>NoImageProductLister.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UserControls\NoImageProductLister.ascx.designer.cs">
+      <DependentUpon>NoImageProductLister.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserControls\SpecialOfferList.ascx.cs">
+      <DependentUpon>SpecialOfferList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UserControls\SpecialOfferList.ascx.designer.cs">
+      <DependentUpon>SpecialOfferList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="basketball_macron.aspx.cs">
+      <DependentUpon>basketball_macron.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="basketball_macron.aspx.designer.cs">
+      <DependentUpon>basketball_macron.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="basketball_errea.aspx.cs">
+      <DependentUpon>basketball_errea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="basketball_errea.aspx.designer.cs">
+      <DependentUpon>basketball_errea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="basketball_mini.aspx.cs">
+      <DependentUpon>basketball_mini.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="basketball_mini.aspx.designer.cs">
+      <DependentUpon>basketball_mini.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="badminton.aspx.cs">
+      <DependentUpon>badminton.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="badminton.aspx.designer.cs">
+      <DependentUpon>badminton.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="matsandbenches.aspx.cs">
+      <DependentUpon>matsandbenches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="matsandbenches.aspx.designer.cs">
+      <DependentUpon>matsandbenches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="football_kit_errea.aspx.cs">
+      <DependentUpon>football_kit_errea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="football_kit_errea.aspx.designer.cs">
+      <DependentUpon>football_kit_errea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="football_kit_macron.aspx.cs">
+      <DependentUpon>football_kit_macron.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="football_kit_macron.aspx.designer.cs">
+      <DependentUpon>football_kit_macron.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="requestinformation.aspx.cs">
+      <DependentUpon>requestinformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="requestinformation.aspx.designer.cs">
+      <DependentUpon>requestinformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privacy.aspx.cs">
+      <DependentUpon>privacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privacy.aspx.designer.cs">
+      <DependentUpon>privacy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="requestcat.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>requestcat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="requestcat.aspx.designer.cs">
+      <DependentUpon>requestcat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="volleyball.aspx.cs">
+      <DependentUpon>volleyball.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="volleyball.aspx.designer.cs">
+      <DependentUpon>volleyball.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trampolines.aspx.cs">
+      <DependentUpon>trampolines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trampolines.aspx.designer.cs">
+      <DependentUpon>trampolines.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trainingequipment.aspx.cs">
+      <DependentUpon>trainingequipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trainingequipment.aspx.designer.cs">
+      <DependentUpon>trainingequipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tabletennis.aspx.cs">
+      <DependentUpon>tabletennis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tabletennis.aspx.designer.cs">
+      <DependentUpon>tabletennis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="softball.aspx.cs">
+      <DependentUpon>softball.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="softball.aspx.designer.cs">
+      <DependentUpon>softball.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rugby.aspx.cs">
+      <DependentUpon>rugby.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rugby.aspx.designer.cs">
+      <DependentUpon>rugby.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="football_clothing.aspx.cs">
+      <DependentUpon>football_clothing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="football_clothing.aspx.designer.cs">
+      <DependentUpon>football_clothing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="racketsports.aspx.cs">
+      <DependentUpon>racketsports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="racketsports.aspx.designer.cs">
+      <DependentUpon>racketsports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="netball.aspx.cs">
+      <DependentUpon>netball.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="netball.aspx.designer.cs">
+      <DependentUpon>netball.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hockey.aspx.cs">
+      <DependentUpon>hockey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hockey.aspx.designer.cs">
+      <DependentUpon>hockey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cricket.aspx.cs">
+      <DependentUpon>cricket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cricket.aspx.designer.cs">
+      <DependentUpon>cricket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="football_goals.aspx.cs">
+      <DependentUpon>football_goals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="football_goals.aspx.designer.cs">
+      <DependentUpon>football_goals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="football_balls.aspx.cs">
+      <DependentUpon>football_balls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="football_balls.aspx.designer.cs">
+      <DependentUpon>football_balls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="football_kit.aspx.cs">
+      <DependentUpon>football_kit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="football_kit.aspx.designer.cs">
+      <DependentUpon>football_kit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="football.aspx.cs">
+      <DependentUpon>football.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="football.aspx.designer.cs">
+      <DependentUpon>football.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\DirectSports.Master.cs">
+      <DependentUpon>DirectSports.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\DirectSports.Master.designer.cs">
+      <DependentUpon>DirectSports.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="default.aspx" />
+    <Content Include="images\ds_body_bg.jpg" />
+    <Content Include="images\ds_headertab_left.gif" />
+    <Content Include="images\ds_headertab_left.jpg" />
+    <Content Include="images\ds_headertab_right.gif" />
+    <Content Include="images\ds_header_bg.jpg" />
+    <Content Include="images\ds_home_ball.jpg" />
+    <Content Include="images\ds_home_ring.jpg" />
+    <Content Include="images\ds_logo_main.gif" />
+    <Content Include="images\ds_sepbar_bg.jpg" />
+    <Content Include="images\spacer.gif" />
+    <Content Include="MasterPages\DirectSports.Master" />
+    <Content Include="styles\global.css" />
+    <Content Include="styles\ie\ie6.css" />
+    <Content Include="styles\ie\ie7.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="adminarea\editproduct.aspx" />
+    <Content Include="adminarea\js\submodalsource.js" />
+    <Content Include="adminarea\js\utils.js" />
+    <Content Include="adminarea\loading.html" />
+    <Content Include="adminarea\login.aspx" />
+    <Content Include="adminarea\productadmin.aspx" />
+    <Content Include="adminarea\styles\admin.css" />
+    <Content Include="adminarea\styles\forms.css" />
+    <Content Include="adminarea\styles\submodal.css" />
+    <Content Include="basketball.aspx" />
+    <Content Include="basketball_direct.aspx" />
+    <Content Include="basketball_legea.aspx" />
+    <Content Include="basketball_balls.aspx" />
+    <Content Include="basketball_accessoriesandref.aspx" />
+    <Content Include="basketball_scoring.aspx" />
+    <Content Include="basketball_posts.aspx" />
+    <Content Include="basketball_rings.aspx" />
+    <Content Include="athletics.aspx" />
+    <Content Include="athletics_kits.aspx" />
+    <Content Include="athletics_equipment.aspx" />
+    <Content Include="Controls\UserControls\NoImageProductLister.ascx" />
+    <Content Include="productimages\ds_te_bottlecarrier.jpg" />
+    <Content Include="productimages\ds_te_coachingfolder.jpg" />
+    <Content Include="productimages\ds_te_compressor.jpg" />
+    <Content Include="productimages\ds_te_parachute.jpg" />
+    <Content Include="productimages\ds_te_passingarc.jpg" />
+    <Content Include="productimages\ds_te_reversibletrainingbib.jpg" />
+    <Content Include="productimages\ds_te_slipover.jpg" />
+    <Content Include="productimages\ds_te_spacemarkersflexi.jpg" />
+    <Content Include="productimages\ds_te_spacemarkersrigid.jpg" />
+    <Content Include="productimages\ds_te_speedhurdle.jpg" />
+    <Content Include="productimages\ds_te_speedladder.jpg" />
+    <Content Include="productimages\ds_te_spump.jpg" />
+    <Content Include="productimages\ds_te_trainingbib.jpg" />
+    <Content Include="productimages\ds_te_waterbottle.jpg" />
+    <Content Include="productimages\ds_tramps_jkdeluxe.jpg" />
+    <Content Include="productimages\ds_tramps_jkhighjump.jpg" />
+    <Content Include="productimages\ds_tramps_jkjumppod.jpg" />
+    <Content Include="productimages\ds_tramps_jkpop.jpg" />
+    <Content Include="productimages\ds_tt_butcompact.jpg" />
+    <Content Include="productimages\ds_tt_buthomerollaway.jpg" />
+    <Content Include="productimages\ds_tt_butplaybackrollaway.jpg" />
+    <Content Include="productimages\ds_tt_butpremiumrollaway.jpg" />
+    <Content Include="productimages\ds_vol_legabruzzo.jpg" />
+    <Content Include="productimages\ds_vol_legcalabria.jpg" />
+    <Content Include="productimages\ds_vol_legcampania.jpg" />
+    <Content Include="productimages\ds_vol_legcracovia.jpg" />
+    <Content Include="productimages\ds_vol_legsardinia.jpg" />
+    <Content Include="productimages\ds_vol_legvento.jpg" />
+    <Content Include="productimages\ds_vol_stannomodena.jpg" />
+    <Content Include="productimages\ds_vol_stannomundial.jpg" />
+    <Content Include="productimages\ds_vol_stannoporto.jpg" />
+    <Content Include="requestcat.aspx" />
+    <Content Include="volleyball.aspx" />
+    <Content Include="trampolines.aspx" />
+    <Content Include="trainingequipment.aspx" />
+    <Content Include="tabletennis.aspx" />
+    <Content Include="images\ds_gridalternate_back.jpg" />
+    <Content Include="images\ds_no_image_grid_header.gif" />
+    <Content Include="images\ds_no_image_grid_header.jpg" />
+    <Content Include="images\loading.gif" />
+    <Content Include="productimages\ds_acc_ballcaddy.jpg" />
+    <Content Include="productimages\ds_acc_ballcage.jpg" />
+    <Content Include="productimages\ds_acc_ballsack.jpg" />
+    <Content Include="productimages\ds_acc_balltrolley.jpg" />
+    <Content Include="productimages\ds_acc_clipboard.jpg" />
+    <Content Include="productimages\ds_acc_kitbag.jpg" />
+    <Content Include="productimages\ds_athkit_100.jpg" />
+    <Content Include="productimages\ds_athkit_100plus.jpg" />
+    <Content Include="productimages\ds_athkit_100plusshorts.jpg" />
+    <Content Include="productimages\ds_athkit_100shorts.jpg" />
+    <Content Include="productimages\ds_athkit_1500.jpg" />
+    <Content Include="productimages\ds_athkit_200.jpg" />
+    <Content Include="productimages\ds_athkit_200shorts.jpg" />
+    <Content Include="productimages\ds_athkit_400.jpg" />
+    <Content Include="productimages\ds_athkit_800.jpg" />
+    <Content Include="productimages\ds_athkit_legmik.jpg" />
+    <Content Include="productimages\ds_athkit_legnax.jpg" />
+    <Content Include="productimages\ds_athkit_legsir.jpg" />
+    <Content Include="productimages\ds_athkit_speciala.jpg" />
+    <Content Include="productimages\ds_athkit_specialb.jpg" />
+    <Content Include="productimages\ds_athkit_specialc.jpg" />
+    <Content Include="productimages\ds_fballs_mitrealto.jpg" />
+    <Content Include="productimages\ds_fballs_mitrecalcio.jpg" />
+    <Content Include="productimages\ds_fballs_mitrecosmic.jpg" />
+    <Content Include="productimages\ds_fballs_mitrecyclone.jpg" />
+    <Content Include="productimages\ds_fballs_mitremax.jpg" />
+    <Content Include="productimages\ds_fballs_mitremonde.jpg" />
+    <Content Include="productimages\ds_fballs_mitrerio.jpg" />
+    <Content Include="productimages\ds_fballs_mitresoft.jpg" />
+    <Content Include="productimages\ds_fballs_mitretactic.jpg" />
+    <Content Include="productimages\ds_fballs_mitreultimatch.jpg" />
+    <Content Include="productimages\ds_fballs_uhlsportintense.jpg" />
+    <Content Include="productimages\ds_fballs_uhlsporttempest.jpg" />
+    <Content Include="productimages\ds_footcloth_dakota.jpg" />
+    <Content Include="productimages\ds_footcloth_iceland.jpg" />
+    <Content Include="productimages\ds_footcloth_italia.jpg" />
+    <Content Include="productimages\ds_footcloth_kentucky.jpg" />
+    <Content Include="productimages\ds_footcloth_malta.jpg" />
+    <Content Include="productimages\ds_footcloth_marocco.jpg" />
+    <Content Include="productimages\ds_footcloth_minnesota.jpg" />
+    <Content Include="productimages\ds_footcloth_montecarlo.jpg" />
+    <Content Include="productimages\ds_footcloth_paraguay.jpg" />
+    <Content Include="productimages\ds_footcloth_romania.jpg" />
+    <Content Include="productimages\ds_footkit_arechigk.jpg" />
+    <Content Include="productimages\ds_footkit_athens.jpg" />
+    <Content Include="productimages\ds_footkit_clearance.jpg" />
+    <Content Include="productimages\ds_footkit_fluo.jpg" />
+    <Content Include="productimages\ds_footkit_intsock.jpg" />
+    <Content Include="productimages\ds_footkit_lausanne.jpg" />
+    <Content Include="productimages\ds_footkit_liege.jpg" />
+    <Content Include="productimages\ds_footkit_lipsia.jpg" />
+    <Content Include="productimages\ds_footkit_london.jpg" />
+    <Content Include="productimages\ds_footkit_lugano.jpg" />
+    <Content Include="productimages\ds_footkit_mondialsock.jpg" />
+    <Content Include="productimages\ds_footkit_neuropasock.jpg" />
+    <Content Include="productimages\ds_footkit_oceaniagk.jpg" />
+    <Content Include="productimages\ds_footkit_profsock.jpg" />
+    <Content Include="productimages\ds_footkit_ref.jpg" />
+    <Content Include="productimages\ds_footkit_sansirogk.jpg" />
+    <Content Include="productimages\ds_footkit_saopaologk.jpg" />
+    <Content Include="productimages\ds_footkit_sarajevo.jpg" />
+    <Content Include="productimages\ds_footkit_sofia.jpg" />
+    <Content Include="productimages\ds_footkit_sparta.jpg" />
+    <Content Include="productimages\ds_footkit_stockholm.jpg" />
+    <Content Include="productimages\ds_footkit_strasburg.jpg" />
+    <Content Include="productimages\ds_footkit_vienna.jpg" />
+    <Content Include="productimages\ds_hockey_shirthk1.jpg" />
+    <Content Include="productimages\ds_hockey_shirthk2.jpg" />
+    <Content Include="productimages\ds_hockey_shirthk3.jpg" />
+    <Content Include="productimages\ds_hockey_shirthk4.jpg" />
+    <Content Include="productimages\ds_hockey_shirthk5.jpg" />
+    <Content Include="productimages\ds_hockey_shirthk6.jpg" />
+    <Content Include="productimages\ds_hockey_shortshm21.jpg" />
+    <Content Include="productimages\ds_hockey_shortshm22.jpg" />
+    <Content Include="productimages\ds_hockey_shortshm23.jpg" />
+    <Content Include="productimages\ds_hockey_skirthw11.jpg" />
+    <Content Include="productimages\ds_hockey_skirthw12.jpg" />
+    <Content Include="productimages\ds_hockey_skirthw13.jpg" />
+    <Content Include="productimages\ds_netball_dress1.jpg" />
+    <Content Include="productimages\ds_netball_dress2.jpg" />
+    <Content Include="productimages\ds_netball_dress3.jpg" />
+    <Content Include="productimages\ds_netball_skirt1.jpg" />
+    <Content Include="productimages\ds_netball_skirt2.jpg" />
+    <Content Include="productimages\ds_netball_skirt3.jpg" />
+    <Content Include="productimages\ds_netball_top1.jpg" />
+    <Content Include="productimages\ds_netball_top2.jpg" />
+    <Content Include="productimages\ds_netball_top3.jpg" />
+    <Content Include="productimages\ds_posts_easijust.jpg" />
+    <Content Include="productimages\ds_posts_foldtravel.jpg" />
+    <Content Include="productimages\ds_posts_game.jpg" />
+    <Content Include="productimages\ds_posts_quickadjust.jpg" />
+    <Content Include="productimages\ds_posts_ssallinone.jpg" />
+    <Content Include="productimages\ds_posts_sseurocourt.jpg" />
+    <Content Include="productimages\ds_posts_ssgooseneck.jpg" />
+    <Content Include="productimages\ds_posts_ssmegagoal.jpg" />
+    <Content Include="productimages\ds_posts_tournamentcourt.jpg" />
+    <Content Include="productimages\ds_posts_ujust.jpg" />
+    <Content Include="productimages\ds_ref_shirt.jpg" />
+    <Content Include="productimages\ds_ring_flex.jpg" />
+    <Content Include="productimages\ds_ring_flexcompetition.jpg" />
+    <Content Include="productimages\ds_ring_heavyduty.jpg" />
+    <Content Include="productimages\ds_ring_ins.jpg" />
+    <Content Include="productimages\ds_ring_ultraflex.jpg" />
+    <Content Include="productimages\ds_scoring_24sec.jpg" />
+    <Content Include="productimages\ds_scoring_scorepad.jpg" />
+    <Content Include="productimages\ds_scoring_ttscollegiate.jpg" />
+    <Content Include="productimages\ds_scoring_ttscoreunit.jpg" />
+    <Content Include="productimages\ds_scoring_ttsstramatel.jpg" />
+    <Content Include="productimages\ds_scoring_wmscoreboard.jpg" />
+    <Content Include="softball.aspx" />
+    <Content Include="rugby.aspx" />
+    <Content Include="football_clothing.aspx" />
+    <Content Include="racketsports.aspx" />
+    <Content Include="netball.aspx" />
+    <Content Include="hockey.aspx" />
+    <Content Include="cricket.aspx" />
+    <Content Include="football_goals.aspx" />
+    <Content Include="football_balls.aspx" />
+    <Content Include="football_kit.aspx" />
+    <Content Include="football.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\close.gif" />
+    <Content Include="images\ds_admin_gridalternate_bg.gif" />
+    <Content Include="images\ds_admin_gridrow_bg.gif" />
+    <Content Include="images\ds_admin_grid_edit.gif" />
+    <Content Include="images\ds_admin_grid_edit_hover.gif" />
+    <Content Include="images\ds_headertab_left_new.gif" />
+    <Content Include="images\ds_headertab_right_new.gif" />
+    <Content Include="images\ds_home_catrequest.jpg" />
+    <Content Include="images\ds_leftnav_headfoot_bg.jpg" />
+    <Content Include="images\ds_leftnav_item_bg.jpg" />
+    <Content Include="images\ds_leftnav_subitem_bg.jpg" />
+    <Content Include="images\ds_logo_admin.gif" />
+    <Content Include="images\ds_popup_loading.gif" />
+    <Content Include="js\IEElementActions.js" />
+    <Content Include="productimages\ds_bballs_baden371.jpg" />
+    <Content Include="productimages\ds_bballs_baden400.jpg" />
+    <Content Include="productimages\ds_bballs_baden427.jpg" />
+    <Content Include="productimages\ds_bballs_baden471.jpg" />
+    <Content Include="productimages\ds_bballs_badenequalizer.jpg" />
+    <Content Include="productimages\ds_bballs_legealb5000.jpg" />
+    <Content Include="productimages\ds_bballs_moltenbgg7.jpg" />
+    <Content Include="productimages\ds_bballs_sureshot.jpg" />
+    <Content Include="productimages\ds_dsbkit_club.jpg" />
+    <Content Include="productimages\ds_dsbkit_finalfour.jpg" />
+    <Content Include="productimages\ds_dsbkit_finalfourtt.jpg" />
+    <Content Include="productimages\ds_dsbkit_playofftt.jpg" />
+    <Content Include="productimages\ds_dsbkit_reversible.jpg" />
+    <Content Include="productimages\ds_dsbkit_reversibleplus.jpg" />
+    <Content Include="productimages\ds_dsbkit_reversibleteam.jpg" />
+    <Content Include="productimages\ds_dsbkit_reversibleteamplus.jpg" />
+    <Content Include="productimages\ds_dsbkit_team.jpg" />
+    <Content Include="productimages\ds_legeakit_denver.jpg" />
+    <Content Include="productimages\ds_legeakit_double.jpg" />
+    <Content Include="productimages\ds_legeakit_illinois.jpg" />
+    <Content Include="productimages\ds_legeakit_ny.jpg" />
+    <Content Include="productimages\ds_legeakit_seattle.jpg" />
+    <Content Include="productimages\ds_legeakit_tunisia.jpg" />
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Personal\Development\asp.net2.0\CommonResources\RRMCustomControls\RRMCustomControls.csproj">
+      <Project>{EE2ED740-259F-47EB-AC16-6DACA84C38D9}</Project>
+      <Name>RRMCustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DirectSports.Generate\DirectSports.BL.csproj">
+      <Project>{9F5CCC53-3412-41BC-AE9D-3213BD996D70}</Project>
+      <Name>DirectSports.BL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="contact.aspx" />
+    <Content Include="logger.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="adminarea\default.aspx" />
+    <Content Include="adminarea\MasterPages\DirectSportsAdmin.Master" />
+    <Content Include="adminarea\specialofferadmin.aspx" />
+    <Content Include="Controls\UserControls\SpecialOfferList.ascx" />
+    <Content Include="about.aspx" />
+    <Content Include="basketball_macron.aspx" />
+    <Content Include="basketball_errea.aspx" />
+    <Content Include="basketball_mini.aspx" />
+    <Content Include="badminton.aspx" />
+    <Content Include="matsandbenches.aspx" />
+    <Content Include="football_kit_errea.aspx" />
+    <Content Include="football_kit_macron.aspx" />
+    <Content Include="productimages\ds_acc_moltbclarge.jpg" />
+    <Content Include="productimages\ds_acc_moltbcsmall.jpg" />
+    <Content Include="productimages\ds_acc_moltstratboard.jpg" />
+    <Content Include="productimages\ds_bad_attacker.jpg" />
+    <Content Include="productimages\ds_bad_crusader.jpg" />
+    <Content Include="productimages\ds_bad_invader.jpg" />
+    <Content Include="productimages\ds_bad_nylonshuttles.jpg" />
+    <Content Include="productimages\ds_bad_postnetset.jpg" />
+    <Content Include="productimages\ds_bad_posts.jpg" />
+    <Content Include="productimages\ds_bad_striker.jpg" />
+    <Content Include="productimages\ds_bballs_baden300.jpg" />
+    <Content Include="productimages\ds_bballs_moltenge.jpg" />
+    <Content Include="productimages\ds_bballs_moltengf.jpg" />
+    <Content Include="productimages\ds_bballs_moltengm.jpg" />
+    <Content Include="productimages\ds_bballs_moltengr.jpg" />
+    <Content Include="productimages\ds_crick_cage.jpg" />
+    <Content Include="productimages\ds_crick_ct1.jpg" />
+    <Content Include="productimages\ds_crick_ct2.jpg" />
+    <Content Include="productimages\ds_crick_ct3.jpg" />
+    <Content Include="productimages\ds_crick_gloves.jpg" />
+    <Content Include="productimages\ds_crick_helmet.jpg" />
+    <Content Include="productimages\ds_crick_jump.jpg" />
+    <Content Include="productimages\ds_crick_kwikset.jpg" />
+    <Content Include="productimages\ds_crick_pads.jpg" />
+    <Content Include="productimages\ds_crick_readclub.jpg" />
+    <Content Include="productimages\ds_crick_readcrown.jpg" />
+    <Content Include="productimages\ds_crick_scorebook.jpg" />
+    <Content Include="productimages\ds_crick_springstumps.jpg" />
+    <Content Include="productimages\ds_crick_stumps.jpg" />
+    <Content Include="productimages\ds_crick_supaball.jpg" />
+    <Content Include="productimages\ds_crick_trousers.jpg" />
+    <Content Include="productimages\ds_crick_umpcoat.jpg" />
+    <Content Include="productimages\ds_crick_wind.jpg" />
+    <Content Include="productimages\ds_crick_wkgloves.jpg" />
+    <Content Include="productimages\ds_crick_wkpads.jpg" />
+    <Content Include="productimages\ds_dsbkit_clubtt.jpg" />
+    <Content Include="productimages\ds_dsbkit_league.jpg" />
+    <Content Include="productimages\ds_erreakit_alpha.jpg" />
+    <Content Include="productimages\ds_erreakit_cosmo.jpg" />
+    <Content Include="productimages\ds_erreakit_jets.jpg" />
+    <Content Include="productimages\ds_erreakit_jump.jpg" />
+    <Content Include="productimages\ds_erreakit_samoa.jpg" />
+    <Content Include="productimages\ds_erreakit_tucson.jpg" />
+    <Content Include="productimages\ds_fballs_mitreorion.jpg" />
+    <Content Include="productimages\ds_fballs_mitrepromax.jpg" />
+    <Content Include="productimages\ds_fballs_mitreultimax.jpg" />
+    <Content Include="productimages\ds_fkiterrea_antares.jpg" />
+    <Content Include="productimages\ds_fkiterrea_dinamitegk.jpg" />
+    <Content Include="productimages\ds_fkiterrea_frejus.jpg" />
+    <Content Include="productimages\ds_fkiterrea_orion.jpg" />
+    <Content Include="productimages\ds_fkiterrea_rodi.jpg" />
+    <Content Include="productimages\ds_fkiterrea_squadgk.jpg" />
+    <Content Include="productimages\ds_fkitmacron_aragon.jpg" />
+    <Content Include="productimages\ds_fkitmacron_argosocks.jpg" />
+    <Content Include="productimages\ds_fkitmacron_azores.jpg" />
+    <Content Include="productimages\ds_fkitmacron_barca.jpg" />
+    <Content Include="productimages\ds_fkitmacron_bruges.jpg" />
+    <Content Include="productimages\ds_fkitmacron_cross.jpg" />
+    <Content Include="productimages\ds_fkitmacron_lagos.jpg" />
+    <Content Include="productimages\ds_fkitmacron_lisbon.jpg" />
+    <Content Include="productimages\ds_fkitmacron_odin.jpg" />
+    <Content Include="productimages\ds_fkitmacron_riviera.jpg" />
+    <Content Include="productimages\ds_fkitmacron_solgk.jpg" />
+    <Content Include="productimages\ds_fkitmacron_targetgk.jpg" />
+    <Content Include="productimages\ds_footclothmacron_amazon.jpg" />
+    <Content Include="productimages\ds_footclothmacron_atlantic.jpg" />
+    <Content Include="productimages\ds_footclothmacron_satry.jpg" />
+    <Content Include="productimages\ds_footclothmacron_thor.jpg" />
+    <Content Include="productimages\ds_footclothmacron_torrance.jpg" />
+    <Content Include="productimages\ds_footkit_amburgo.jpg" />
+    <Content Include="productimages\ds_legeakit_atlanta.jpg" />
+    <Content Include="productimages\ds_legeakit_chicago.jpg" />
+    <Content Include="productimages\ds_legeakit_detroit.jpg" />
+    <Content Include="productimages\ds_legeakit_indiana.jpg" />
+    <Content Include="productimages\ds_macronbb_apache.jpg" />
+    <Content Include="productimages\ds_macronbb_assist.jpg" />
+    <Content Include="productimages\ds_macronbb_brooklyn.jpg" />
+    <Content Include="productimages\ds_macronbb_cares.jpg" />
+    <Content Include="productimages\ds_macronbb_crimson.jpg" />
+    <Content Include="productimages\ds_macronbb_dragon.jpg" />
+    <Content Include="productimages\ds_macronbb_f200rev.jpg" />
+    <Content Include="productimages\ds_macronbb_georgia.jpg" />
+    <Content Include="productimages\ds_macronbb_gonzaga.jpg" />
+    <Content Include="productimages\ds_macronbb_hornets.jpg" />
+    <Content Include="productimages\ds_macronbb_jumprev.jpg" />
+    <Content Include="productimages\ds_macronbb_pivotrev.jpg" />
+    <Content Include="productimages\ds_macronbb_temple.jpg" />
+    <Content Include="productimages\ds_macronbb_x200rev.jpg" />
+    <Content Include="productimages\ds_matsandbenches_aerobicmat.jpg" />
+    <Content Include="productimages\ds_matsandbenches_balancebench.jpg" />
+    <Content Include="productimages\ds_matsandbenches_colouredbench.jpg" />
+    <Content Include="productimages\ds_matsandbenches_deluxe.jpg" />
+    <Content Include="productimages\ds_matsandbenches_foldable.jpg" />
+    <Content Include="productimages\ds_matsandbenches_jigsawmat.jpg" />
+    <Content Include="productimages\ds_matsandbenches_mattrolley.jpg" />
+    <Content Include="productimages\ds_matsandbenches_multipurpose.jpg" />
+    <Content Include="productimages\ds_mini_compacthoops.jpg" />
+    <Content Include="productimages\ds_mini_easishot.jpg" />
+    <Content Include="productimages\ds_mini_goldenpro.jpg" />
+    <Content Include="productimages\ds_mini_littleshot.jpg" />
+    <Content Include="productimages\ds_mini_realplay.jpg" />
+    <Content Include="productimages\ds_mini_sidecourt.jpg" />
+    <Content Include="productimages\ds_mini_skilcoach.jpg" />
+    <Content Include="productimages\ds_mini_streetcourt.jpg" />
+    <Content Include="productimages\ds_mini_teamplay.jpg" />
+    <Content Include="productimages\ds_posts_maxi.jpg" />
+    <Content Include="productimages\ds_posts_mini.jpg" />
+    <Content Include="productimages\ds_ring_heavydutydouble.jpg" />
+    <Content Include="productimages\ds_scoring_ttsmolten.jpg" />
+    <Content Include="productimages\ds_tramps_jkjpclassic.jpg" />
+    <Content Include="productimages\ds_tramps_jkjpdeluxe.jpg" />
+    <Content Include="productimages\ds_tramps_jkjporbounder.jpg" />
+    <Content Include="productimages\ds_tramps_myfirsttrampoline.jpg" />
+    <Content Include="productimages\ds_tramps_tent.jpg" />
+    <Content Include="requestinformation.aspx" />
+    <Content Include="privacy.aspx" />
+    <Content Include="images\ds_body_bg.gif" />
+    <Content Include="images\ds_move_down.gif" />
+    <Content Include="images\ds_move_up.gif" />
+    <Content Include="images\ds_specialoffer_bg.jpg" />
+    <Content Include="images\ds_specialoffer_bg_over.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="logs\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1102</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

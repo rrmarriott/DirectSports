@@ -1,0 +1,542 @@
+body
+{
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 0.8em;
+	color: #000;
+	background: #fff url(../images/ds_body_bg.jpg) repeat-y 50% 0;
+	background-attachment: fixed;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+img
+{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+a, a:visited
+{
+	color: #000;
+	background: transparent;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: #fff;
+	background: #ccc;
+}
+
+a:active
+{
+	color: #000;
+	background: transparent;
+}
+
+a.aNoHover:hover
+{
+	color: #000;
+	background: transparent;
+	text-decoration: underline;
+}
+
+.floatleft
+{
+	float: left;
+}
+.centered
+{
+	text-align: center;
+}
+
+#ancLogoHome
+{
+	background: transparent;
+}
+
+#divContainer
+{
+	background: transparent;
+	margin: 0 auto;
+	width: 789px;
+	text-align: left;
+	position: relative;
+	border: 0px solid red;
+}
+
+#divHolder
+{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	background: transparent;
+}
+
+#divHeaderNavContainer
+{
+	width: 789px;
+	height: 100px;
+	position: relative;
+	top: 0;
+	left: 0;
+	border: 0px solid red;
+}
+
+#divHeader
+{ 
+	width: 789px;
+	height: 83px;
+	background: #fff url(../images/ds_header_bg.jpg) no-repeat;
+	border: 0px solid green;
+}
+
+#divHeaderInner
+{
+	padding: 2em 2em 0 2em;
+}
+
+div#divHeaderContact
+{
+	float: right;
+	font-size: 1.2em;
+}
+
+#divTopNavWrapper
+{
+	position: relative;
+	width: 789px;
+	/*height: 65px;*/
+	text-align: center;
+	z-index: 5;
+	border: 0px solid green; /* temporary for layout - remove when done testing */
+}
+
+#divSepBar
+{
+	float: left;
+	width: 779px;
+	border: 0px solid red;
+	background: url(../images/ds_sepbar_bg.jpg) repeat-x bottom;
+	margin: 0 0 0 0.3em;
+}
+
+div#breadcrumbHolder
+{
+	margin: 2.3em 0 0 0.8em;
+}
+
+div#breadcrumbHolder a
+{
+	font-weight: bold;
+}
+
+div#divMenuContainer
+{
+	float: left;
+	width: 18%;
+	border: 0px solid #BDBDBD;
+	height: 40em;
+	margin: 0.6em 0.3em 0 0.8em;
+}
+
+/* Begin Top Tab Styles */
+
+.divTabNav
+{
+	float: left;
+	width: 90%;
+	position: relative;
+	font-size: 85%;
+	text-transform: uppercase;
+	line-height: normal;
+}
+
+.divTabNav ul
+{
+	margin: 0 auto;
+	padding: 0 0 0 6px;
+	list-style: none;
+}
+
+.divTabNav li
+{
+	float: left;
+	background: url("../images/ds_headertab_left_new.gif") no-repeat left bottom;
+	background-position: 0 -129px;
+	padding: 0 0 0 4px;
+}
+
+.divTabNav a {
+float: left;
+display: block;
+width: .1em;
+background: url("../images/ds_headertab_right_new.gif") no-repeat right bottom;
+background-position: 100% -129px;
+padding: 2px 5px 2px 3px;
+text-decoration: none;
+font-weight: bold;
+color: #000;
+white-space: nowrap;
+}
+
+.divTabNav > ul a {width: auto;}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+.divTabNav a {float: none;}
+/* End IE5-Mac hack */
+
+#page0 .Tab0, #page1 .Tab1,
+#page2 .Tab2, #page3 .Tab3,
+#page4 .Tab4, #page5 .Tab5,
+#page6 .Tab6, #page7 .Tab7,
+#page8 .Tab8, #page9 .Tab9,
+#page10 .Tab10, #page11 .Tab11,
+#page12 .Tab12, #page13 .Tab13,
+#page14 .Tab14, #page15 .Tab15,
+#page16 .Tab16, #page17 .Tab17
+{
+	background-position: 0 -68px;
+	border-width: 0;
+}
+
+#page0 .Tab0 a, #page1 .Tab1 a,
+#page2 .Tab2 a, #page3 .Tab3 a,
+#page4 .Tab4 a, #page5 .Tab5 a,
+#page6 .Tab6 a, #page7 .Tab7 a,
+#page8 .Tab8 a, #page9 .Tab9 a,
+#page10 .Tab10 a, #page11 .Tab11 a,
+#page12 .Tab12 a, #page13 .Tab13 a,
+#page14 .Tab14 a, #page15 .Tab15 a,
+#page16 .Tab16 a, #page17 .Tab17 a
+{
+	background-position: 100% -68px;
+	color: #fff;
+}
+
+.divTabNav li:hover, .divTabNav li.NavTabOver
+{
+	background-position: 0 0px;
+}
+
+.divTabNav li:hover a, .divTabNav li.NavTabOver a, .divTabNav li.NavTabOver a:visited, .divTabNav li.NavTabOver a:active
+{
+	background-position: 100% 0px;
+}
+
+/* End Top Tab Styles */
+
+/* Begin Left Nav Styles */
+.LeftNavMenu
+{
+	border: 1px solid #BDBDBD;
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: url("../images/ds_leftnav_headfoot_bg.jpg") repeat top;
+}
+
+.LeftNavMenu li a
+{
+	display: block;
+	text-decoration: none;
+	color: #000;
+	padding: 0.2em;
+	width: 100%;
+}
+
+.LeftNavMenu li a:hover
+{
+	background: transparent;
+	color: inherit;
+}
+
+.LeftNavMenu li, .LeftNavMenu li#LeftNavHeader
+{
+	border-bottom: 1px solid #BDBDBD;
+}
+
+.LeftNavMenu li#LeftNavHeader, .LeftNavMenu li#LeftNavFooter
+{
+	padding: 0.2em 0em 0.2em 0;
+	background: url("../images/ds_leftnav_headfoot_bg.jpg") repeat-x top;
+	font-weight: bold;
+}
+
+.LeftNavMenu li.Level1
+{
+	background: url("../images/ds_leftnav_item_bg.jpg") repeat-x top;
+}
+
+.LeftNavMenu li.Level2
+{
+	background: #fff url("../images/ds_leftnav_subitem_bg.jpg") no-repeat top left;
+}
+
+.LeftNavMenu li.Level1:hover, .LeftNavMenu li.Level2:hover, .LeftNavMenu li.MenuItemOver
+{
+	background-position: 0 -50px;
+}
+
+.LeftNavMenu li.MenuItemOver a
+{
+	color: #000;
+}
+
+/* End Left Nav Styles */
+
+h1.sectionHeader
+{
+	color: #000;
+	font-size: 1.4em;
+	border-bottom: 2px dotted #ccc;
+}
+
+h1.homePageSectionHeader
+{
+	font-size: 1.8em;
+	border: 0;
+}
+
+h1.sectionHeader span.italic
+{
+	font-family: Verdana, Arial, Sans-Serif;
+	font-style: italic;
+}
+
+h1.sectionHeader span.emphasis
+{
+	font-family: Arial Black, Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0em;
+	margin-top: 0;
+}
+
+div#mainContent
+{
+	border: 0px solid red;
+	float: left;
+	width: 78%;
+	margin: 0.6em 0.2em 0.2em 0.2em;
+}
+
+div#footerCopyright
+{
+	float: right;
+}
+
+div#footer
+{
+	float: left;
+	text-align: left;
+	text-transform: uppercase;
+	width: 97%;
+	border-top: 3px dotted #cccccc;
+	margin: 1em 0 0em 0.7em;
+	padding: 0 0 2em 0;
+}
+
+/* Specific HomePage styles */
+div.divHomePageSection
+{
+	width: 100%;
+	height: 13.5em;
+	border: 0px solid red;
+	border-bottom: 3px dotted #cccccc;
+	/*clear: both;*/
+	margin: 0.5em 0 0 0.2em;
+}
+
+div.divLastHomePageSection
+{
+	border: 0;
+}
+
+div.divHomePageImageContainer
+{
+	height: 100%;
+	float: left;
+	margin: 0 0.2em 0 0.2em;
+}
+
+a#requestCat, a#requestCat:visited
+{
+	background: transparent url(../images/ds_no_image_grid_header.jpg) repeat-x bottom;
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	color: #000;
+	padding: 0.2em;
+}
+
+a#requestCat:hover
+{
+	background: transparent url(../images/ds_no_image_grid_header.jpg) repeat-x bottom;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+	color: #000;
+}
+
+a#requestCat:active
+{
+	background: transparent url(../images/ds_no_image_grid_header.jpg) repeat-x bottom;
+	color: #000;
+}
+/* End Specific HomePage styles */
+
+/* Product Listing Styles */
+
+table.ImageLister
+{
+	width: 100%;
+}
+
+table.ImageLister td
+{
+	border-bottom: 2px dotted #ccc;
+	text-align: left;
+	padding: 0.5em 0 0.5em 0;
+	vertical-align: top;
+	width: 32%;
+}
+
+table.ImageLister td img
+{
+	border: 1px solid #000;
+}
+
+p.parProductInfo
+{
+	margin: 0 0 0 0;
+}
+
+h2.h2Subsection
+{
+	font-size: 1.2em;
+}
+
+table.tblNoImageProductList
+{
+	width: 100%;
+	border: 0;
+	padding: 0;
+	border-collapse: collapse;
+}
+
+table.tblNoImageProductList tr td
+{
+	border-bottom: 1px solid #ccc;
+	padding: 0 0 0 0.2em;
+}
+
+table.tblNoImageProductList thead tr
+{
+	background: transparent url(../images/ds_no_image_grid_header.jpg) repeat-x bottom;
+}
+
+table.tblNoImageProductList thead tr td
+{
+	border-bottom: 0px solid #000;
+	font-weight: bold;
+	padding: 0.2em;
+}
+
+table.tblNoImageProductList tr.alternate
+{
+	background: transparent url(../images/ds_gridalternate_back.jpg) repeat-x bottom;
+}
+
+div.variationText
+{
+	font-size: 8pt;
+}
+
+/* End Product listing styles */
+
+/* Direct Sports bball styles */
+div#divDirectBballBottomOptions
+{
+	border: 1px solid #000;
+	padding: 0.3em;
+	margin-bottom: 1em;
+}
+/* End Direct Sports bball styles */
+
+/* Accessories/Ref Styles */
+div#divRefBottom
+{
+	width: 100%;
+	text-align: center;
+	margin: 1em 0 0 0;
+}
+
+div#divRefBottom img
+{
+	border: 1px solid #000;
+}
+/* Accessories/Ref Styles */
+table.specialOfferGrid
+{
+	width: 72%;
+	border-top: 1px solid #BDBDBD !important;
+	border-left: 1px solid #BDBDBD !important;
+	border-right: 1px solid #BDBDBD !important;
+}
+
+table.specialOfferGrid tr
+{
+	background: url(../images/ds_specialoffer_bg.jpg) repeat-x bottom;
+	cursor: default;
+	border-bottom: 1px solid #BDBDBD !important;
+	vertical-align: top;
+}
+
+/* Forms */
+fieldset
+{
+	border: 1px solid #ccc;
+	padding: 0.6em;
+}
+
+fieldset legend
+{
+	border: 1px solid #ccc;
+	background: #EAE8E3;
+	padding: 0.3em;
+	margin: 0;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+fieldset.hasFields input, fieldset.hasFields textarea, fieldset.hasFields span
+{
+	margin: 0 0 0 5em;
+	display: block;
+	width: 20em;
+}
+
+fieldset.hasFields span.errorMessage
+{
+	padding-left: 0.4em;
+}
+
+fieldset.hasFields label
+{
+	float: left;
+}
+/* End Forms */
+
+/* Begin Special Offer Grid */
+
+/* End Special Offer Grid */
