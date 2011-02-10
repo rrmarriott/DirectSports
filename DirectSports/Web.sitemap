@@ -41,7 +41,7 @@
       </siteMapNode>
       <siteMapNode url="~/contact.aspx" title="Contact Us" description="Direct Sports - Contact" />
       <siteMapNode url="~/requestinformation.aspx" title="Request Information"  description="Direct Sports - Request Information" />
-      <siteMapNode url="~/about.aspx" title="About Us"  description="Direct Sports - About" />
+      <!--siteMapNode url="~/about.aspx" title="About Us"  description="Direct Sports - About" />-->
       <siteMapNode url="~/privacy.aspx" title="Privacy Policy"  description="Direct Sports - Privacy Policy" />
     </siteMapNode>
 </siteMap>
