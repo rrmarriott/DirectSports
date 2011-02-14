@@ -7,12 +7,28 @@
     <div id="divHomePageAbout">
             <h1 class="sectionHeader">About Direct Sports</h1>
             <p>
-            &lsquo;Direct Sports of Wiltshire&rsquo; have been providing quality kit and equipment
-            to schools and clubs around the country for over 10 years. Although the company
-            started out by manufacturing their own basketball kit, it now supplies kit and equipment
-            for most sports and is the local distributor for LEGEA sportswear. Our aim is to
-            provide good quality products at affordable prices so please contact us to discuss
-            your requirements.</p>
+&lsquo;Direct Sports&rsquo; of Wiltshire was started in 1995 in order to provide their own brand of
+basketball kits to local schools and clubs.</p>
+<p>
+We now supply kit and equipment for most sports, and we have added team wear
+from Italian brands Errea, Legea and Macron to our range, and our customers now
+include schools, clubs and universities throughout the country.
+</p>
+<p>
+In 2010, embroidery facilities were added so we are now able to supply a complete
+range of leisurewear including polo shirts, sweatshirts, rain wear, sports bags etc.
+</p>
+<p>
+Our web site shows only a small selection of items which are available from our
+company. Please contact us if you are looking to purchase any items not shown and
+we will do our best to source these products and provide you with a competitive
+quotation.
+</p>
+<p>
+Customers are encouraged to telephone or e-mail for further details, particularly with
+regards to the purchase of team wear, so we can give you the information you require
+about sizes, colours, fabrics etc.
+</p>
     </div>
     <div class="divHomePageSection divLastHomePageSection">
         <div class="divHomePageImageContainer">
